@@ -45,4 +45,14 @@ http://127.0.0.1:8000/identify
   "phoneNumber": "1234567890"
 }
 
+# Render API 
+https://bitespeed-api-vv7s.onrender.com/identify
+
+# Example Request Body
+{
+  "email": "lorraine@hillvalley.edu",
+  "phoneNumber": "123456"
+}
+
+
 
