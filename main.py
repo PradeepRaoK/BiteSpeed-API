@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 import database, models, schemas, crud
-
+import os
 
 app = FastAPI()
 
@@ -73,3 +73,7 @@ def identify(payload: schemas.IdentifyRequest, db: Session = Depends(get_db)):
             "secondaryContactIds": secondary_ids
         }
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True)
